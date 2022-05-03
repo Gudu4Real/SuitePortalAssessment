@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ALL_SERVICE_TYPES } from '@suiteportal/api-interfaces';
+import { MaintenanceRequest } from '@suiteportal/api-interfaces';
 
 @Component({
   selector: 'pm-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ListComponent implements OnInit {
 
   serviceTypes = ALL_SERVICE_TYPES;
 
@@ -16,10 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(data : any){
-    this.http.post('http://localhost:3333/api/maintenance-requests',data).subscribe((result)=>{
-      console.warn('result', result)
-    })
+  list(){
+    return this.http.get<MaintenanceRequest[]>('http://localhost:3333/api/maintenance-requests')
   }
 
 }

@@ -11,7 +11,7 @@ export class MaintenanceRequestController {
     //
   }
 
-  @Post('/')
+  @Post()
   public async createMaintenanceRequest(
     @Body() maintenanceRequest: MaintenanceRequest,
   ) {
@@ -22,6 +22,10 @@ export class MaintenanceRequestController {
       throw new BadRequestException('Must provide a valid Service Type');
     }
     return await this.maintenanceRequestService.createMaintenanceRequest(maintenanceRequest);
+  }
+  @Get('/')
+  public async listMaintenanceRequests() {
+    return await this.maintenanceRequestService.listMaintenanceRequests();
   }
 
   @Get('/:id')

@@ -44,4 +44,8 @@ export class MaintenanceRequestDao {
   async getMaintenanceRequest(id: string): Promise<MaintenanceRequestDB> {
     return await this.collection.find({ id }).value();
   }
+
+  async getMaintenanceRequests(): Promise<MaintenanceRequestDB> {
+    return await this.collection.value();
+  }
 }
