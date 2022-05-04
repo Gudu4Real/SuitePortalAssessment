@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Post, Get, Param } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Post, Get, Param, Put } from '@nestjs/common';
 import { MaintenanceRequest } from '@suiteportal/api-interfaces';
 import { MaintenanceRequestService } from './maintenance-request.service';
 
@@ -23,7 +23,7 @@ export class MaintenanceRequestController {
     }
     return await this.maintenanceRequestService.createMaintenanceRequest(maintenanceRequest);
   }
-  @Get('/')
+  @Get()
   public async listMaintenanceRequests() {
     return await this.maintenanceRequestService.listMaintenanceRequests();
   }
@@ -38,4 +38,18 @@ export class MaintenanceRequestController {
     return await this.maintenanceRequestService.getMaintenanceRequest(id);
   }
 
+  @Put()
+  public async closedMaintenanceRequest(
+    @Param('id') id: string,
+  ) {
+    if (!id) {
+      console.log("OOPs no Id");
+      throw new BadRequestException('No id provided');
+    }
+    console.log("Hi from the api");
+    return await this.maintenanceRequestService.getMaintenanceRequest(id);
+  }
+
+
+  
 }

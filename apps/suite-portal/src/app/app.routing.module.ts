@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import {AdminComponent} from './admin/admin.component';
 import { HomeModule } from './home/home.module';
 import {AdminModule} from './admin/admin.module';
+import { ListComponent } from './list/list.component';
+import {ListModule} from './list/list.module';
 
 const routes: Routes = [
   {
@@ -15,6 +17,10 @@ const routes: Routes = [
     component: AdminComponent,
   },
   {
+    path: 'list',
+    component: ListComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
   }
@@ -24,6 +30,7 @@ const routes: Routes = [
   imports: [
     HomeModule,
     AdminModule,
+    ListModule,
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
       enableTracing: true,

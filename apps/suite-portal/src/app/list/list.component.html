@@ -19,11 +19,19 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr *ngFor="let request of MaintenanceRequest">
-                      <td>{{request.Apartment}}</td>
+                  <tr *ngFor="let request of maintenanceRequests">
+                      <td>{{request.unitNumber}}</td>
                       <td>{{request.name}}</td>
                       <td>{{request.email}}</td>
-                      <td>{{request.serviceType}}</td>
+                      <td>{{request.serviceType}}</td> 
+                      <td> 
+                      <form #closeRequestForm="ngForm"(ngSubmit) ="onSubmit(request.id)">
+                                 
+                          <button type="submit" (ngSubmit) ="onSubmit(request.id)" mat-raised-button color="accent" >
+                          Close
+                        </button>
+                      </form>
+                    </td>
                   </tr>
               </tbody>
           </table>
