@@ -49,8 +49,8 @@ export class MaintenanceRequestDao {
     return await this.collection.value();
   }
 
-  async closeMaintenanceRequests(id: string): Promise<MaintenanceRequestDB> {
-    console.log("hi from the method");
-    return await this.collection.remove({id});
+  async closeMaintenanceRequest(id: string): Promise<MaintenanceRequestDB> {
+    console.log("Removing item");
+    return await this.collection.remove({id}).write();
   }
 }

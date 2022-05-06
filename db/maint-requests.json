@@ -21,26 +21,6 @@
       "submittedAt": "2022-05-03T13:24:58.563Z"
     },
     {
-      "id": "Uu-H0hU5A4",
-      "unitNumber": "2",
-      "name": "Test Test 1",
-      "email": "email@email.com",
-      "serviceType": "pest-control",
-      "summary": "asdff",
-      "details": "adfaf",
-      "submittedAt": "2022-05-03T18:38:15.124Z"
-    },
-    {
-      "id": "uxoqFlonJH",
-      "unitNumber": "1",
-      "name": "Test Test 1",
-      "email": "email@email.com",
-      "serviceType": "pest-control",
-      "summary": "adsf",
-      "details": "sdf",
-      "submittedAt": "2022-05-03T18:39:56.982Z"
-    },
-    {
       "id": "pegPFOeL7k",
       "unitNumber": "1",
       "name": "Test Test 1",
@@ -51,16 +31,6 @@
       "submittedAt": "2022-05-03T19:03:09.447Z"
     },
     {
-      "id": "G-JGFoR3eA",
-      "unitNumber": "1",
-      "name": "Test Test 1",
-      "email": "email@email.com",
-      "serviceType": "pest-control",
-      "summary": "adsf",
-      "details": "sdf",
-      "submittedAt": "2022-05-03T19:05:39.102Z"
-    },
-    {
       "id": "z3kV5cb-2L",
       "unitNumber": "adfa",
       "name": "adfa",
@@ -69,16 +39,6 @@
       "summary": "afda",
       "details": "adfa",
       "submittedAt": "2022-05-04T09:45:25.001Z"
-    },
-    {
-      "id": "wy_eJaHUMg",
-      "unitNumber": "adfa",
-      "name": "adfa",
-      "email": "afda",
-      "serviceType": "general",
-      "summary": "afda",
-      "details": "adfa",
-      "submittedAt": "2022-05-04T09:45:30.594Z"
     },
     {
       "id": "_Uw6QUk-QB",

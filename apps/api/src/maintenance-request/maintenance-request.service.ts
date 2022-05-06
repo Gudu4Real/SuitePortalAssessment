@@ -23,8 +23,8 @@ export class MaintenanceRequestService {
     return await this.maintReqDao.getMaintenanceRequests();
   }
 
-  async closeMaintenanceRequests(id: string) {
-    return await this.maintReqDao.closeMaintenanceRequests(id);
+  async closeMaintenanceRequest(id: string) {
+    return await this.maintReqDao.closeMaintenanceRequest(id);
   }
 
 }

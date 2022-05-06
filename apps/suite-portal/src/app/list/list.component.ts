@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
 
   serviceTypes = ALL_SERVICE_TYPES;
   maintenanceRequests;
-  id;
+  response;
 
   constructor(private http: HttpClient) {}
 
@@ -23,9 +23,7 @@ export class ListComponent implements OnInit {
   }
   onSubmit(id: string){
     console.warn(id);
-      return this.http.put('http://localhost:3333/api/maintenance-requests',id).subscribe(data => this.id = id);
-    // return this.http.get<MaintenanceRequest[]>('http://localhost:3333/api/maintenance-requests')
-  
+    return this.http.put<MaintenanceRequest>('http://localhost:3333/api/maintenance-requests/',{}, {params: {id: id}}).subscribe(data => {this.ngOnInit()});
   }
 }
 
